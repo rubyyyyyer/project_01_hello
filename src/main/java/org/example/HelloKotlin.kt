@@ -8,6 +8,9 @@ fun main() {
 //    Boy().hello()
     val b=Boy(65.5f,1.8f)
     println( b.bmi())
+    var s : String? = "abcde"
+    s = null
+    println("s值的長度：" + s?.length)
 }
 
 class Boy(var weight:Float,var height:Float){
