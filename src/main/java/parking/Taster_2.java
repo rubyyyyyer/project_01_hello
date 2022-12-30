@@ -13,8 +13,29 @@ public class Taster_2 {
     public static void main(String[] args) {
 //        java8Before();
 //        java8After();
+//        parkingTest1();
+//        parking
+        LocalDateTime enterTime = LocalDateTime.of(2022,12,30,20,0,0);
+        LocalDateTime leaveTime = LocalDateTime.of(2022,12,30,22,20,0);
+        int perHoursFee = 30;
+        Car car = new Car("AA-1234",enterTime);
+//        int getParkingTime =(int)(Math.round(car.getParkingTime(leaveTime)/60f*1.0)*1.0);
+//        System.out.println("停多久?(分鐘)：" +car.getParkingTime(leaveTime));
+//        System.out.println("停多久?(小時)：" +getParkingTime);
+//        System.out.println("總共多少錢?：" +car.parkingFee(perHoursFee,getParkingTime));
+    }
 
-
+    private static void parkingTest1() {
+        LocalDateTime enterTime =
+                LocalDateTime.of(2022,12,30,14,0,0);
+        LocalDateTime leaveTime =
+                LocalDateTime.of(2022,12,30,16,5,0);
+        CarTest1 car = new CarTest1("YY-1234",enterTime,30);
+        car.setLeaveTime(leaveTime);
+        System.out.println(car.getParkingTime());
+        long parkingTimeHour = (long)Math.ceil(car.getParkingTime()/60f);
+        System.out.println(parkingTimeHour);
+        System.out.println(parkingTimeHour*30);
     }
 
     private static void java8After() {
